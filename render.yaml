@@ -1,13 +1,12 @@
 services:
   - type: web
     name: autohire-backend
-    runtime: java                    # ✅ Must be explicitly set
+    env: java
     region: singapore
     plan: free
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/AutoHire-0.0.1-SNAPSHOT.jar
     branch: master
-
     envVars:
       - key: SPRING_DATASOURCE_URL
         value: jdbc:postgresql://dpg-d1ig9pbipnbc73bne7dg-a.singapore-postgres.render.com/autohire_db
