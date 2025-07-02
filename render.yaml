@@ -2,11 +2,12 @@ services:
   - type: web
     name: autohire-backend
     env: java
+    runtime: docker
     region: singapore
     plan: free
-    buildCommand: ./mvnw clean install
-    startCommand: java -jar target/AutoHire-0.0.1-SNAPSHOT.jar
     branch: master
+    buildCommand: ./mvnw clean package -DskipTests
+    startCommand: java -jar target/AutoHire-0.0.1-SNAPSHOT.jar
     envVars:
       - key: SPRING_DATASOURCE_URL
         value: jdbc:postgresql://dpg-d1ig9pbipnbc73bne7dg-a.singapore-postgres.render.com/autohire_db
@@ -22,5 +23,3 @@ services:
         value: sJp@2025!_SecureKey_For_JWT_Token_Validation#89
       - key: JWT_EXPIRATION
         value: 14400000
-      - key: SERVER_PORT
-        value: 10000
