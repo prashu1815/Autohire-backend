@@ -92,9 +92,9 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
 
-        // ✅ Add both local and deployed frontend URLs
+
         config.setAllowedOrigins(List.of(
-                "http://localhost:5173"
+                "https://autohire-frontend-ixqo.vercel.app"
         ));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
