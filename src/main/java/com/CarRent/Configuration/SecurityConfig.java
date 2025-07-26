@@ -94,7 +94,7 @@ public class SecurityConfig {
 
 
         config.setAllowedOrigins(List.of(
-                "https://autohire-frontend-ixqo.vercel.app"
+                "https://autohire-murex.vercel.app"
         ));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
