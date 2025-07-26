@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Step 3: Add the JAR file to the container
 # Replace `demo-0.0.1-SNAPSHOT.jar` with your actual JAR name
-COPY target/demo-0.0.1-SNAPSHOT.jar app.jar
+COPY target/AutoHire-0.0.1-SNAPSHOT.jar app.jar
 
 # Step 4: Expose the port
 EXPOSE 8080
