@@ -8,7 +8,7 @@ WORKDIR /app
 # Replace `demo-0.0.1-SNAPSHOT.jar` with your actual JAR name
 COPY target/demo-0.0.1-SNAPSHOT.jar app.jar
 
-# Step 4: Expose the port (optional but recommended)
+# Step 4: Expose the port
 EXPOSE 8080
 
 # Step 5: Run the application
